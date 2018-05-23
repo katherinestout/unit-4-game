@@ -2,7 +2,6 @@
 
 
 
-
 $(document).ready(function(){
 
 
@@ -52,16 +51,16 @@ document.onkeydown = function(event) {
 //win and lose functions!
 
 function winner() {
-  alert("YOU'RE A WINNER!");
+  alert("WINNER WINNER CHICKEN DINNER!");
   wins++;
-  $("#number-of-wins").text("Wins: " + winCounter);
+  $("#number-of-wins").text("Wins:" + winCounter);
   reset();
 }
 
 function loser() {
-  alert("SUCH A LOSER!");
+  alert("LOSSSSER!");
   losses++;
-  $("#number-of-losses").text("Losses: "+ lossCounter);
+  $("#number-of-losses").text("Losses:"+ lossCounter);
   reset();
 }
 
