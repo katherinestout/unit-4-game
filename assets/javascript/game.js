@@ -1,10 +1,5 @@
 
-
-
-
 $(document).ready(function(){
-
-
 
 var winCounter = 0;
 var lossCounter = 0;
@@ -26,13 +21,12 @@ $("#number-of-wins").text("Wins: " + winCounter);
 $("#number-of-losses").text("Losses: " + lossCounter);
 
 
-
-
 //the number were trying to get: targetnumber: generates a random number between 1-12
 
 //each time you click one of the crystals it generates a random number:
 
 function reset(){
+
 targetNumber = Math.floor(Math.random() * 11) +1;
 $("#number-to-guess").text(targetNumber);
 
@@ -52,19 +46,19 @@ document.onkeydown = function(event) {
 
 function winner() {
   alert("WINNER WINNER CHICKEN DINNER!");
-  wins++;
+  winCounter++;
   $("#number-of-wins").text("Wins:" + winCounter);
   reset();
 }
 
 function loser() {
   alert("LOSSSSER!");
-  losses++;
+  lossCounter++;
   $("#number-of-losses").text("Losses:"+ lossCounter);
   reset();
 }
 
-  $("#crystal1").on ("click", function() {
+  $("#crystal1").on("click", function() {
     counter = counter + crystal1;
     $("#numbercounter").text(counter);
       if (counter == targetNumber) {
@@ -76,29 +70,31 @@ function loser() {
       }
   })
   
-  $("#crystal2").on ("click", function() {
+  $("#crystal2").on("click", function() {
     counter = counter + crystal2;
-    $("#numbercounter").text(score);
-      if (score == targetNumber) {
+    $("#numbercounter").text(counter);
+      if (counter == targetNumber) {
         winner();
       }   else if (counter > targetNumber) {
         loser();
       }
   })
   
-  $("#crystal3").on ("click", function() {
+  $("#crystal3").on("click", function() {
     counter = counter + crystal2;
-    $("#numbercounter").text(score);
-      if (score == targetNumber) {
-        winner(); else if (counter > targetNumber) {
+    $("#numbercounter").text(counter);
+      if (counter == targetNumber) {
+        winner(); 
+        
+      } else if (counter > targetNumber) {
         loser();
       }
   })
 
-  $("#crystal4").on ("click", function() {
+  $("#crystal4").on("click", function() {
     counter = counter + crystal2;
-    $("#numbercounter").text(score);
-      if (score == targetNumber) {
+    $("#numbercounter").text(counter);
+      if (counter == targetNumber) {
         winner();
       }
       else if (counter > targetNumber) {
